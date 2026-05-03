@@ -13,6 +13,14 @@ public class Journal
     //Declare and instantiate a public list of Entry objects. 
     public List<Entry> _entries = new List<Entry>();
 
+    public void Display()
+    {
+        //call the Display method of each entry in the journal. 
+        foreach(var entry in _entries)
+        {
+        entry.Display();
+        }
+    }
 
     //Method for writing a new journal entry.
     public void NewEntry(string date, string prompt)

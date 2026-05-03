@@ -32,11 +32,8 @@ class Program
             //the option selected. 
             if (choice == "1")
             {
-                //call the Display method of each entry in the journal. 
-                foreach(var entry in journal._entries)
-                {
-                entry.Display();
-                }
+                //Display the journal's contents
+                journal.Display();
             }
 
             else if (choice == "2")
