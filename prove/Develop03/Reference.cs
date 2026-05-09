@@ -38,10 +38,6 @@ class Reference
         _book = bookTitle.Trim();
         _chapter = splitChapVerse[0];
 
-        Console.WriteLine($"book: {bookTitle}");
-        Console.WriteLine($"chapter and verse: {chapterVerse}");
-        Console.WriteLine($"{_book} {_chapter}:{_startVerse}");
-
     }
 
     public Reference(string book, string chapter, string verse)
