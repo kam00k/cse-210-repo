@@ -1,10 +1,10 @@
 class BreathingActivity : Activity
 {
-    public BreathingActivity()
+    public BreathingActivity(int duration)
     {
         _name = "Breathing Activity";
         _description = "This activity will help you to relax and calm your mind through a controlled breathing exercise.";
-        _duration = 0;
+        _duration = duration;
     }
 
     public void BreathingLoop()
@@ -21,7 +21,20 @@ class BreathingActivity : Activity
 
         while (currentTime < stopTime)
         {
-            
+            Console.Clear();
+            Console.WriteLine(_name);
+            Console.WriteLine(_description);
+
+            Console.WriteLine("Breathe in...");
+            Countdown(5);
+
+            Console.Clear();
+            Console.WriteLine(_name);
+            Console.WriteLine(_description);
+
+            Console.WriteLine("Breathe out...");
+            Countdown(5);
+            currentTime = DateTime.Now;
         }
 
     }
