@@ -4,7 +4,7 @@ class Activity
     protected string _description;
     protected int _duration;
     protected List<string> _promptList = new List<string>();
-    protected Random _rand;
+    protected Random _rand = new Random();
 
 
     public void Spin()
