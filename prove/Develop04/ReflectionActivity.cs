@@ -26,6 +26,20 @@ class ReflectionActivity : Activity
 
     public void ReflectionLoop()
     {
-        
+        DateTime startTime = DateTime.Now;
+        DateTime stopTime = startTime.AddSeconds(_duration);
+        DateTime currentTime = startTime;
+
+        int promptRandInt = _rand.Next(0, _promptList.Count());
+        int reflectionRandInt = _rand.Next(0, _reflectionList.Count());
+
+        Console.WriteLine(_promptList[promptRandInt]);
+
+        while (currentTime < stopTime)
+        {
+            Console.WriteLine(_reflectionList[reflectionRandInt]);
+            Spin(6);
+            currentTime = DateTime.Now;
+        }
     }
 }

@@ -7,29 +7,35 @@ class Activity
     protected Random _rand = new Random();
 
 
-    public void Spin()
+    public void Spin(int rounds)
     {
         string[] whirly = {"-", "\\", "|", "/"};
-        foreach (var thing in whirly)
+        for (int i = 0; i < rounds; i++)
         {
-            Console.Write(thing);
-            Thread.Sleep(100);
-            Console.Write("\b \b");
+            foreach (var thing in whirly)
+            {
+                Console.Write(thing);
+                Thread.Sleep(100);
+                Console.Write("\b \b");
+            }
         }
     }
 
-    public void Ellipsis()
+    public void Ellipsis(int rounds)
     {
-        Console.Write(". ");
-        Thread.Sleep(400);
-        Console.Write(". ");
-        Thread.Sleep(400);
-        Console.Write(". ");
-        Thread.Sleep(400);
-        Console.SetCursorPosition(0, Console.CursorTop);
-        Console.Write(new String(' ', Console.WindowWidth));
-        Console.SetCursorPosition(0, Console.CursorTop);
-        Thread.Sleep(400);
+        for (int i = 0; i < rounds; i++)
+        {
+            Console.Write(". ");
+            Thread.Sleep(400);
+            Console.Write(". ");
+            Thread.Sleep(400);
+            Console.Write(". ");
+            Thread.Sleep(400);
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Console.Write(new String(' ', Console.WindowWidth));
+            Console.SetCursorPosition(0, Console.CursorTop);
+            Thread.Sleep(400);
+        }
     }
 
     public void Countdown(int duration)
@@ -44,7 +50,7 @@ class Activity
             Thread.Sleep(1000);
         }
         Console.Write("\b \b");
-        Console.Write(0);
+        Console.Write("0\n");
     }
 
 

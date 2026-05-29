@@ -26,27 +26,15 @@ class Program
             if(choice == "1")
             {
                 BreathingActivity breathe = new BreathingActivity(duration);
-                for(int i = 0; i < 10; i++)
-                {
-                    breathe.Spin();
-                }
             }
             else if (choice == "2")
             {
                 ReflectionActivity reflect = new ReflectionActivity(duration);
-                for(int i = 0; i < 10; i++)
-                {
-                    reflect.Spin();
-                }
-
-                for(int i = 0; i < 10; i++)
-                {
-                    reflect.Ellipsis();
-                }
             }
             else if (choice == "3")
             {
                 ListingActivity list = new ListingActivity(duration);
+                list.ListingLoop();
             }
             else
             {
