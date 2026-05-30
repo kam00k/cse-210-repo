@@ -15,7 +15,7 @@ class Activity
             foreach (var thing in whirly)
             {
                 Console.Write(thing);
-                Thread.Sleep(100);
+                Thread.Sleep(125);
                 Console.Write("\b \b");
             }
         }
@@ -26,15 +26,15 @@ class Activity
         for (int i = 0; i < rounds; i++)
         {
             Console.Write(". ");
-            Thread.Sleep(400);
+            Thread.Sleep(250);
             Console.Write(". ");
-            Thread.Sleep(400);
+            Thread.Sleep(250);
             Console.Write(". ");
-            Thread.Sleep(400);
+            Thread.Sleep(250);
             Console.SetCursorPosition(0, Console.CursorTop);
             Console.Write(new String(' ', Console.WindowWidth));
             Console.SetCursorPosition(0, Console.CursorTop);
-            Thread.Sleep(400);
+            Thread.Sleep(250);
         }
     }
 
@@ -53,5 +53,9 @@ class Activity
         Console.Write("0\n");
     }
 
+    public void EndMessage()
+    {
+        Console.WriteLine("\nWell done! We hope this activity helped you to relax and increase your mindfulness and positivity.\n");
+    }
 
 }
