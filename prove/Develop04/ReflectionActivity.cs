@@ -7,7 +7,6 @@ class ReflectionActivity : Activity
         _name = "Reflection Activity";
         _description = "This activity will help you to think positively by having you recall times of growth from your past and ponder them.";
 
-
         _promptList.Add("Think of a time when you helped someone out of trouble");
         _promptList.Add("Think of a time when you pushed your limits.");
         _promptList.Add("Think of a time when someone confided in you.");
