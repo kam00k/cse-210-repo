@@ -12,7 +12,7 @@ public class Order
         _productList = new List<Product>();
     }
 
-    public void AddProduct(string productName, int id, double unitPrice, int quant)
+    public void AddProduct(string productName, string id, double unitPrice, int quant)
     {
         _productList.Add(new Product(productName, id, unitPrice, quant));
     }
@@ -25,8 +25,38 @@ public class Order
         {
             totalPrice += product.CalcSingleTotalPrice();
         }
+        if (_customer.IsAmerican() == true){
+            totalPrice += 5.00;
+        }
+        else
+        {
+            totalPrice += 35.00;
+        }
 
         return totalPrice;
     }
 
+    public string PrintPackingLabel()
+    {
+        string packingLabelString = "\n----------------Packing Label------------------";
+
+        foreach (var item in _productList)
+        {
+            packingLabelString += ($"\n({item.GetID()}) - {item.GetProductName()}");
+        }
+        packingLabelString += "\n----------------------------------------------";
+
+        return packingLabelString;
+    }
+
+    public string PrintShippingLabel()
+    {
+        string shippingLabelString = "\n----------------Shipping Label------------------\n";
+
+        shippingLabelString += ($"To:{_customer.GetName()}\n{_customer.GetAddressString()}");
+        shippingLabelString += "\n------------------------------------------------";
+
+        return shippingLabelString;
+
+    }
 }
