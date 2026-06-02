@@ -25,7 +25,7 @@ public class Video
     {
         foreach (var comment in _commentList)
         {
-            Console.WriteLine($"Comment by {comment._commentAuthor}: \n'{comment._commentText}'");
+            Console.WriteLine($"\nComment by {comment._commentAuthor}: \n'{comment._commentText}'");
         }
     }
 }
