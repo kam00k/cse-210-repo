@@ -1,16 +1,21 @@
-using System;
+//Jack Wilson
+//CSE 210
+//Final Project, Program 1
 
 class Program
 {
     static void Main(string[] args)
     {
 
+        //create a list of video objects
         List<Video> videoList = new List<Video>();
 
+        //populate the list with Video objects, passing in their information as parameters
         videoList.Add(new Video("99 ways to peel a blackcurrant", "Fruitland Slasher", 3096));
         videoList.Add(new Video("How I sawed this boat in half using the all new Flex Saw", "Billy Mays", 600));
         videoList.Add(new Video("It's over...", "Asmongold", 234));
 
+        //Add comments to each video's comment list, passing in the author name and text body as parameters
         videoList[0]._commentList.Add(new Comment("Peter Suund", "Very relaxing. I have this on in the background whenever I need to relax"));
         videoList[0]._commentList.Add(new Comment("Henry Hilfinger", "The fruitland slasher is at it again! 10/10 would watch again"));
         videoList[0]._commentList.Add(new Comment("surgeon324", "Unironically helped me pass my last med school class."));
@@ -25,17 +30,21 @@ class Program
         videoList[2]._commentList.Add(new Comment("hulk_hogan_rip", "I saw a cockroach crawl out of his cup. never change."));
         videoList[2]._commentList.Add(new Comment("kailentit", "ok but how is this going to help me ship a button in 2026?"));
 
+        //iterate through each video
         foreach (var video in videoList)
         {
+            //Output information about the video in a formatted way.
             Console.WriteLine("\n-------------------------------------");
             Console.WriteLine($"Video Title: {video._title}");
             Console.WriteLine($"Author: {video._author}");
             Console.WriteLine($"Video Length (Seconds): {video._length}");
             Console.WriteLine($"Number of Comments: {video.GetCommentNumber()}");
             
+            //List the comments under each video
             video.ListComments();
         }
-
+        
+        //final formatting line to keep it neat
         Console.WriteLine("\n-------------------------------------");
     }
 }
