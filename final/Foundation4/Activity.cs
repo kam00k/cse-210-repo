@@ -1,11 +1,11 @@
 public class Activity
 {
     protected string _date;
-    protected int _length;
+    protected double _length;
 
     protected string _activityType;
 
-    public Activity(string date, int length)
+    public Activity(string date, double length)
     {
         _date = date;
         _length = length;
@@ -28,6 +28,6 @@ public class Activity
 
     public string GetSummary()
     {
-        return ($"{_date} {_activityType} ({_length} min)- Distance: {GetDistance()}, Speed: {GetSpeed()}, Pace: {GetPace()}");
+        return ($"{_date} {_activityType} ({_length} min)- Distance: {GetDistance():F2} km, Speed: {GetSpeed():F2}km/h, Pace: {GetPace():F2} min per km");
     }
 }
