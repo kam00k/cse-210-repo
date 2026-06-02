@@ -25,6 +25,8 @@ public class Order
         {
             totalPrice += product.CalcSingleTotalPrice();
         }
+
+        return totalPrice;
     }
 
 }

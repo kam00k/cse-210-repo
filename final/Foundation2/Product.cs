@@ -23,4 +23,9 @@ public class Product
     {
         return _productID;
     }
+
+    public double CalcSingleTotalPrice()
+    {
+        return _pricePerUnit * _quantity;
+    }
 }
