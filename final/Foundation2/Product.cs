@@ -1,3 +1,7 @@
+//Jack Wilson
+//CSE 210
+//Final Project, Program 2
+
 public class Product
 {
     private string _productName;

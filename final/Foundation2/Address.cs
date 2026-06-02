@@ -1,3 +1,7 @@
+//Jack Wilson
+//CSE 210
+//Final Project, Program 2
+
 public class Address
 {
     private string _streetAddress;

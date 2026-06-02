@@ -1,3 +1,7 @@
+//Jack Wilson
+//CSE 210
+//Final Project, Program 2
+
 public class Customer
 {
     private string _name;
@@ -22,7 +26,7 @@ public class Customer
 
     public bool IsAmerican()
     {
-        
+
         if (_address.GetCountry() == "USA" ||  _address.GetCountry() == "US" || _address.GetCountry() == "United States")
         {
             return true;

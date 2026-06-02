@@ -1,5 +1,6 @@
-using System.Net.Http.Headers;
-using System.Runtime.InteropServices.Marshalling;
+//Jack Wilson
+//CSE 210
+//Final Project, Program 2
 
 public class Order
 {
