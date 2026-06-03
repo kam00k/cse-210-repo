@@ -4,6 +4,8 @@ class Program
 {
     static void Main(string[] args)
     {
+        GoalList goalList = new GoalList();
+
         while (true){
             Console.Clear();
             Console.WriteLine("Welcome to the JDubs Goal Tracker\nOptions:");
@@ -19,9 +21,7 @@ class Program
             
             if(choice == "1")
             {
-                BreathingActivity breathe = new BreathingActivity();
-                breathe.BreathingLoop();
-                history.SetHistory(0);
+                goalList.AddGoal();
             }
             else if (choice == "2")
             {

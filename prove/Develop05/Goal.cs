@@ -1,14 +1,22 @@
 public class Goal
 {
-    protected int _scoreValue;
+    protected string _goalType;
+    protected string _goalName;
+    protected int _baseScore;
+    protected int _totalScore;
 
-    public Goal()
+    public Goal(string goaltype, string goalName, int baseScore)
     {
-        _scoreValue = 0;
+        _goalType = goaltype;
+        _goalName = goalName;
+        _baseScore = baseScore;
+        _totalScore = 0;
     }
 
     public int GetScore()
     {
-        return _scoreValue;
+        return _totalScore;
     }
+
+    public 
 }
