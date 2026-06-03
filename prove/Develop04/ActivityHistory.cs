@@ -4,11 +4,13 @@
 
 public class ActivityHistory
 {
+    //Counters for each type of activity.
     private int _breathingCounter;
     private int _reflectionCounter;
 
     private int _listingCounter;
 
+    //Constructor. Initializes each counter to zero.
     public ActivityHistory()
     {
         _breathingCounter = 0;
@@ -16,6 +18,7 @@ public class ActivityHistory
         _listingCounter = 0;
     }
 
+    //Sets a different history counter depending on the passed parameter.
     public void SetHistory(int type)
     {
         if (type == 0)
@@ -30,10 +33,18 @@ public class ActivityHistory
         {
             _listingCounter += 1;
         }
+
+        //Only 0, 1 and 2 are acceptable parameters in this version of the method.
+        else
+        {
+            Console.WriteLine("You have an incorrect SetHistory call somewhere.");
+        }
     }
 
     public void GetHistory()
     {
+        //clear the console, display the count of each activity performed this session,
+        //and then wait for the user to press a key to return to the main menu.
         Console.Clear();
         Console.WriteLine($"\nYour activity history is as follows:");
         Console.WriteLine($"Breathing activities performed: {_breathingCounter}");
