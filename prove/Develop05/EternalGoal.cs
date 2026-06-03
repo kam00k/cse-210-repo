@@ -16,4 +16,9 @@ public class EternalGoal : Goal
     {
         return ($"{_goalType},{_goalName},{_baseScore},{_totalScore}");
     }
+
+    public override char IsComplete()
+    {
+        return base.IsComplete();
+    }
 }

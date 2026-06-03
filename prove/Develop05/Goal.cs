@@ -20,6 +20,16 @@ public class Goal
         return _totalScore;
     }
 
+    public string GetName()
+    {
+        return _goalName;
+    }
+
+    public string GetGoalType()
+    {
+        return _goalType;
+    }
+
     public virtual string GetGoalString()
     {
         return "0";
@@ -28,5 +38,10 @@ public class Goal
     public virtual void Report()
     {
         
+    }
+
+    public virtual char IsComplete()
+    {
+        return ' ';
     }
 }

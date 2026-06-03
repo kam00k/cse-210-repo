@@ -6,7 +6,7 @@ public class GoalList
 
     public GoalList()
     {
-        
+        _goalList = new List<Goal>();
     }
     
     public void CreateGoal()
@@ -31,11 +31,11 @@ public class GoalList
 
         if (typeChoice == "1")
         {
-            _goalList.Add(new SimpleGoal("Simple Goal", nameChoice, completionPoints, 0, false));
+            _goalList.Add(new SimpleGoal("Simple", nameChoice, completionPoints, 0, false));
         }
         else if (typeChoice == "2")
         {
-            _goalList.Add(new EternalGoal("Eternal Goal", nameChoice, completionPoints, 0));
+            _goalList.Add(new EternalGoal("Eternal", nameChoice, completionPoints, 0));
         }
         else if (typeChoice == "3")
         {
@@ -44,7 +44,7 @@ public class GoalList
             Console.WriteLine("How many bonus points would you like for full completion of this goal?");
             int bonusPoints = Convert.ToInt32(Console.ReadLine());
 
-            _goalList.Add(new ChecklistGoal("Checklist Goal", nameChoice, completionPoints, 0, false, 0, bonusThreshold, bonusPoints));
+            _goalList.Add(new ChecklistGoal("Checklist", nameChoice, completionPoints, 0, false, 0, bonusThreshold, bonusPoints));
         }
         else
         {
@@ -53,10 +53,23 @@ public class GoalList
 
     public void GetGoalList()
     {
-        foreach (var goal in _goalList)
+        for (int i = 0; i < _goalList.Count; i++)
         {
-            Console.WriteLine(goal.GetGoalString());
+            Goal tempGoal = _goalList[i];
+            if (tempGoal.GetGoalType() == "Simple")
+            {
+                Console.WriteLine($"[{i+1}] [{tempGoal.IsComplete()}] Checklist: {tempGoal.GetName} [{tempGoal.GetGoalString()}]");  
+            }
+            else if (tempGoal.GetGoalType() == "Eternal")
+            {
+                Console.WriteLine($"[{i+1}] [{tempGoal.IsComplete()}] Checklist: {tempGoal.GetName} [{tempGoal.GetGoalString()}]");  
+            }
+            else if (tempGoal.GetGoalType() == "Checklist")
+            {
+                Console.WriteLine($"[{i+1}] [{tempGoal.IsComplete()}] Checklist: {tempGoal.GetName} [{tempGoal.GetGoalString()}]");    
+            } 
         }
+        
     }
 
     public void SaveGoalList()
@@ -108,8 +121,29 @@ public class GoalList
     {
         for (int i = 0; i < _goalList.Count; i++)
         {
-            Console.WriteLine($"[{i+1}] []")
+            Goal tempGoal = _goalList[i];
+            if (tempGoal.GetGoalType() == "Simple")
+            {
+                Console.WriteLine($"[{i+1}] [{tempGoal.IsComplete()}] Checklist: {tempGoal.GetName} [{tempGoal.GetGoalString()}]");  
+            }
+            else if (tempGoal.GetGoalType() == "Eternal")
+            {
+                Console.WriteLine($"[{i+1}] [{tempGoal.IsComplete()}] Checklist: {tempGoal.GetName} [{tempGoal.GetGoalString()}]");  
+            }
+            else if (tempGoal.GetGoalType() == "Checklist")
+            {
+                Console.WriteLine($"[{i+1}] [{tempGoal.IsComplete()}] Checklist: {tempGoal.GetName} [{tempGoal.GetGoalString()}]");    
+            } 
         }
+
+        Console.WriteLine("Please select the activity you would like to record to:");
+        int recordChoice = Convert.ToInt32(Console.ReadLine());
+
+        if (recordChoice > 0 && recordChoice < _goalList.Count+1)
+        {
+            _goalList[recordChoice].Report();
+        }
+
     }
     
 

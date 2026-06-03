@@ -15,6 +15,11 @@ public class ChecklistGoal : Goal
         _bonusScore = bonusScore;
     }
 
+    public string GetCompletionRatio()
+    {
+        return ($"{_timesCompleted} / {_completionsForBonus}");
+    }
+
     public override void Report()
     {
         if (_timesCompleted < _completionsForBonus)
@@ -37,5 +42,17 @@ public class ChecklistGoal : Goal
     public override string GetGoalString()
     {
         return ($"{_goalType},{_goalName},{_baseScore},{_totalScore},{_isComplete},{_timesCompleted},{_completionsForBonus},{_bonusScore}");
+    }
+
+    public override char IsComplete()
+    {
+        if (_isComplete == true)
+        {
+            return 'X';
+        }
+        else
+        {
+            return ' ';
+        }
     }
 }
