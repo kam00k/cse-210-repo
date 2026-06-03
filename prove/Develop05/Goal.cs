@@ -7,17 +7,22 @@ public class Goal
     protected int _baseScore;
     protected int _totalScore;
 
-    public Goal(string goaltype, string goalName, int baseScore)
+    public Goal(string goaltype, string goalName, int baseScore, int totalScore)
     {
         _goalType = goaltype;
         _goalName = goalName;
         _baseScore = baseScore;
-        _totalScore = 0;
+        _totalScore = totalScore;
     }
 
     public int GetScore()
     {
         return _totalScore;
+    }
+
+    public virtual string GetGoalString()
+    {
+        return "0";
     }
 
     public virtual void Report()

@@ -30,11 +30,11 @@ public class GoalList
 
         if (typeChoice == "1")
         {
-            _goalList.Add(new SimpleGoal("Simple Goal", nameChoice, completionPoints, false));
+            _goalList.Add(new SimpleGoal("Simple Goal", nameChoice, completionPoints, 0, false));
         }
         else if (typeChoice == "2")
         {
-            _goalList.Add(new EternalGoal("Eternal Goal", nameChoice, completionPoints));
+            _goalList.Add(new EternalGoal("Eternal Goal", nameChoice, completionPoints, 0));
         }
         else if (typeChoice == "3")
         {
@@ -43,7 +43,7 @@ public class GoalList
             Console.WriteLine("How many bonus points would you like for full completion of this goal?");
             int bonusPoints = Convert.ToInt32(Console.ReadLine());
 
-            _goalList.Add(new ChecklistGoal("Checklist Goal", nameChoice, completionPoints, false, 0, bonusThreshold, bonusPoints));
+            _goalList.Add(new ChecklistGoal("Checklist Goal", nameChoice, completionPoints, 0, false, 0, bonusThreshold, bonusPoints));
         }
         else
         {
@@ -52,7 +52,10 @@ public class GoalList
 
     public void GetGoalList()
     {
-
+        foreach (var goal in _goalList)
+        {
+            
+        }
     }
 
     public void SaveGoalList()
