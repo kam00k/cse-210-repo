@@ -1,3 +1,7 @@
+//Jack Wilson
+//CSE 210
+//W04 Develop Project
+
 class Activity
 {
     protected string _name;
@@ -50,12 +54,13 @@ class Activity
             Thread.Sleep(1000);
         }
         Console.Write("\b \b");
-        Console.Write("0\n");
+        Console.Write("0");
     }
 
     public void EndMessage()
     {
         Console.WriteLine("\nWell done! We hope this activity helped you to relax and increase your mindfulness and positivity.\n");
+        Thread.Sleep(3000);
     }
 
 }

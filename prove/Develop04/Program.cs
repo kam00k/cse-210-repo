@@ -1,4 +1,6 @@
-using System;
+//Jack Wilson
+//CSE 210
+//W04 Develop Project
 
 class Program
 {

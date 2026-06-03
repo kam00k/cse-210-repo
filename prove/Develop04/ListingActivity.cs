@@ -1,3 +1,7 @@
+//Jack Wilson
+//CSE 210
+//W04 Develop Project
+
 class ListingActivity : Activity
 {
     private int _entryCounter;
@@ -29,6 +33,8 @@ class ListingActivity : Activity
         Console.WriteLine("Think about the following prompt until the countdown ends, and then start writing your answers to the prompt. Press Enter after each answer.");
         Console.WriteLine(_promptList[randInt]+"\n");
         Countdown(5);
+        Console.Write("\b \b");
+        Console.Write("Go!\n\n");
 
         while (currentTime < stopTime)
         {
@@ -36,7 +42,8 @@ class ListingActivity : Activity
             _entryCounter += 1;
             currentTime = DateTime.Now;
         }
-        Console.WriteLine($"\nYou wrote out {_entryCounter} answers to the prompt!");
+
+        Console.WriteLine($"\nYou wrote out {_entryCounter} answer(s) to the prompt!");
         EndMessage();
     }
 }

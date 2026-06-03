@@ -1,3 +1,7 @@
+//Jack Wilson
+//CSE 210
+//W04 Develop Project
+
 class ReflectionActivity : Activity
 {
     private List<string> _reflectionList = new List<string>();
@@ -14,13 +18,13 @@ class ReflectionActivity : Activity
 
         _reflectionList.Add("Why was this experience meaningful to you?");
         _reflectionList.Add("Have you ever done anything like this before?");
-        _reflectionList.Add("How did you get started?");
-        _reflectionList.Add("How did you feel when it was complete?");
-        _reflectionList.Add("What made this time different than other times when you were not as successful?");
-        _reflectionList.Add("What is your favorite thing about this experience?");
-        _reflectionList.Add("What could you learn from this experience that applies to other situations?");
-        _reflectionList.Add("What did you learn about yourself through this experience?");
-        _reflectionList.Add("How can you keep this experience in mind in the future?");
+        _reflectionList.Add("How was your perspective changed by this?");
+        _reflectionList.Add("How did you feel afterwards?");
+        _reflectionList.Add("What made this experience stand out to you?");
+        _reflectionList.Add("If you could relive this same event again, what would you do differently?");
+        _reflectionList.Add("How could you apply what you have learned from this experience to your daily life?");
+        _reflectionList.Add("Did you learn anything new about yourself?");
+        _reflectionList.Add("Is this something you would like to experience again?");
     }
 
     public void ReflectionLoop()

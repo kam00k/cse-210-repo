@@ -1,3 +1,7 @@
+//Jack Wilson
+//CSE 210
+//W04 Develop Project
+
 class BreathingActivity : Activity
 {
     public BreathingActivity()
@@ -8,6 +12,7 @@ class BreathingActivity : Activity
 
     public void BreathingLoop()
     {
+        Console.Clear();
         Console.WriteLine(_name);
         Console.WriteLine(_description);
 

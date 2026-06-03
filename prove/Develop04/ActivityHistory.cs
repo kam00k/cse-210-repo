@@ -1,4 +1,8 @@
-class ActivityHistory
+//Jack Wilson
+//CSE 210
+//W04 Develop Project
+
+public class ActivityHistory
 {
     private int _breathingCounter;
     private int _reflectionCounter;
@@ -32,9 +36,9 @@ class ActivityHistory
     {
         Console.Clear();
         Console.WriteLine($"\nYour activity history is as follows:");
-        Console.WriteLine($"You performed {_breathingCounter} Breathing activities");
-        Console.WriteLine($"You performed {_reflectionCounter} Reflection activities");
-        Console.WriteLine($"You performed {_listingCounter} Listing activities\n");
+        Console.WriteLine($"Breathing activities performed: {_breathingCounter}");
+        Console.WriteLine($"Reflection activities performed: {_reflectionCounter}");
+        Console.WriteLine($"Listing activities performed: {_listingCounter}\n");
         Console.WriteLine("Press any key to return...");
         Console.ReadLine();
     }
