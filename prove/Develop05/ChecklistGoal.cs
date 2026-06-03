@@ -36,6 +36,6 @@ public class ChecklistGoal : Goal
 
     public override string GetGoalString()
     {
-        return ($"{_goalType}: {_goalName},{_baseScore},{_totalScore},{_isComplete},{_timesCompleted},{_completionsForBonus},{_bonusScore}");
+        return ($"{_goalType},{_goalName},{_baseScore},{_totalScore},{_isComplete},{_timesCompleted},{_completionsForBonus},{_bonusScore}");
     }
 }

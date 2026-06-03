@@ -7,6 +7,18 @@ public class SimpleGoal : Goal
         _isComplete = complete;
     }
 
+    public char IsComplete()
+    {
+        if (_isComplete == true)
+        {
+            return 'X';
+        }
+        else
+        {
+            return ' ';
+        }
+    }
+
     public override void Report()
     {
         _isComplete = true;
@@ -15,6 +27,8 @@ public class SimpleGoal : Goal
 
     public override string GetGoalString()
     {
-        return ($"{_goalType}: {_goalName},{_baseScore},{_totalScore},{_isComplete}");
+        return ($"{_goalType},{_goalName},{_baseScore},{_totalScore},{_isComplete}");
     }
+
+    
 }

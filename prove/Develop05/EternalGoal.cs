@@ -14,6 +14,6 @@ public class EternalGoal : Goal
 
     public override string GetGoalString()
     {
-        return ($"{_goalType}: {_goalName},{_baseScore},{_totalScore}");
+        return ($"{_goalType},{_goalName},{_baseScore},{_totalScore}");
     }
 }

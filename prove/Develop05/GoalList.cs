@@ -1,3 +1,4 @@
+using System.IO;
 public class GoalList
 {
     List<Goal> _goalList;
@@ -54,23 +55,61 @@ public class GoalList
     {
         foreach (var goal in _goalList)
         {
-            
+            Console.WriteLine(goal.GetGoalString());
         }
     }
 
     public void SaveGoalList()
     {
-        
+        Console.WriteLine("Enter the filename you would like to save this goal list to:");
+        string filename = Console.ReadLine();
+
+        using (StreamWriter outputFile = new StreamWriter(filename))
+        {
+            foreach (var goal in _goalList)
+            {
+                outputFile.WriteLine(goal.GetGoalString());       
+            }            
+        }
+
     }
 
     public void LoadGoalList()
     {
+        _goalList.Clear();
+        Console.WriteLine("Enter the filename you would like to load the goal list from:");
+        string filename = Console.ReadLine();
+        string[] lines = System.IO.File.ReadAllLines(filename);
+
+        foreach (string line in lines)
+        {
+            string[] strings = line.Split(",");
+            for (int i = 0; i < strings.Length; i++)
+            {
+                strings[i] = strings[i].Trim();
+            }
+            if (strings.Length == 5)
+            {
+                _goalList.Add(new SimpleGoal(strings[0], strings[1], Convert.ToInt32(strings[2]), Convert.ToInt32(strings[3]), Convert.ToBoolean(strings[4])));
+            }
+            else if (strings.Length == 4)
+            {
+                _goalList.Add(new EternalGoal(strings[0], strings[1], Convert.ToInt32(strings[2]), Convert.ToInt32(strings[3])));
+            }
+            else if (strings.Length == 8)
+            {
+                _goalList.Add(new ChecklistGoal(strings[0], strings[1], Convert.ToInt32(strings[2]), Convert.ToInt32(strings[3]), Convert.ToBoolean(strings[4]), Convert.ToInt32(strings[5]), Convert.ToInt32(strings[6]), Convert.ToInt32(strings[7])));
+            }
+        }
         
     }
 
     public void Record()
     {
-        
+        for (int i = 0; i < _goalList.Count; i++)
+        {
+            Console.WriteLine($"[{i+1}] []")
+        }
     }
     
 
