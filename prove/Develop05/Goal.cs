@@ -15,6 +15,11 @@ public class Goal
         _totalScore = totalScore;
     }
 
+    public virtual string GetCompletionRatio()
+    {
+        return " ";
+    }
+
     public int GetScore()
     {
         return _totalScore;

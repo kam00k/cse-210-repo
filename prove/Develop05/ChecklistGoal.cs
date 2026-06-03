@@ -15,7 +15,7 @@ public class ChecklistGoal : Goal
         _bonusScore = bonusScore;
     }
 
-    public string GetCompletionRatio()
+    public override string GetCompletionRatio()
     {
         return ($"{_timesCompleted} / {_completionsForBonus}");
     }
@@ -27,14 +27,13 @@ public class ChecklistGoal : Goal
             _timesCompleted += 1;
             if (_timesCompleted == _completionsForBonus)
             {
-                _totalScore += _bonusScore;    
+                _totalScore += _bonusScore;
+                _isComplete = true;    
             }
             else if (_timesCompleted < _completionsForBonus)
             {
                 _totalScore += _baseScore;
             }
-
-            _totalScore += _baseScore;
         }
         
     }
