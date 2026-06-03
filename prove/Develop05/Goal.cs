@@ -1,3 +1,5 @@
+
+
 public class Goal
 {
     protected string _goalType;
@@ -18,5 +20,8 @@ public class Goal
         return _totalScore;
     }
 
-    public 
+    public virtual void Report()
+    {
+        
+    }
 }

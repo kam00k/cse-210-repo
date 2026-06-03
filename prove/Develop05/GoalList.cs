@@ -25,7 +25,7 @@ public class GoalList
         Console.WriteLine("What would you like to name your goal?");
         nameChoice = Console.ReadLine();
         
-        Console.WriteLine("How many points will this earn from completion?");
+        Console.WriteLine("How many points will this earn from a single completion?");
         completionPoints = Convert.ToInt32(Console.ReadLine());
 
         if (typeChoice == "1")
@@ -34,11 +34,16 @@ public class GoalList
         }
         else if (typeChoice == "2")
         {
-            _goalList.Add(new EternalGoal("Eternal Goal", nameChoice, completionPoints, false));
+            _goalList.Add(new EternalGoal("Eternal Goal", nameChoice, completionPoints));
         }
         else if (typeChoice == "3")
         {
-            
+            Console.WriteLine("How many repeats would you like to require for full completion of this goal?");
+            int bonusThreshold = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("How many bonus points would you like for full completion of this goal?");
+            int bonusPoints = Convert.ToInt32(Console.ReadLine());
+
+            _goalList.Add(new ChecklistGoal("Checklist Goal", nameChoice, completionPoints, false, 0, bonusThreshold, bonusPoints));
         }
         else
         {
@@ -60,6 +65,10 @@ public class GoalList
         
     }
 
+    public void Record()
+    {
+        
+    }
     
 
 

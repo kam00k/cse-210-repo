@@ -7,7 +7,9 @@ public class SimpleGoal : Goal
         _isComplete = complete;
     }
 
-    public 
-
-    
+    public override void Report()
+    {
+        _isComplete = true;
+        _totalScore = _baseScore;
+    }
 }

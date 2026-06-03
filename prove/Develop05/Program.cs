@@ -1,4 +1,4 @@
-using System;
+
 
 class Program
 {
@@ -21,23 +21,23 @@ class Program
             
             if(choice == "1")
             {
-                goalList.AddGoal();
+                goalList.CreateGoal();
             }
             else if (choice == "2")
             {
-                ReflectionActivity reflect = new ReflectionActivity();
-                reflect.ReflectionLoop();
-                history.SetHistory(1);
+                goalList.GetGoalList();
             }
             else if (choice == "3")
             {
-                ListingActivity list = new ListingActivity();
-                list.ListingLoop();
-                history.SetHistory(2);
+                goalList.SaveGoalList();
             }
             else if (choice == "4")
             {
-                history.GetHistory();
+                goalList.LoadGoalList();
+            }
+            else if (choice == "5")
+            {
+                goalList.Record();
             }
             else if (choice == "6")
             {
@@ -51,6 +51,5 @@ class Program
                 Console.Clear();
             }
         }
-        Console.WriteLine("Thank you for being mindful with us today.");
     }
 }
