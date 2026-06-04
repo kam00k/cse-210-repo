@@ -1,3 +1,7 @@
+//Jack Wilson
+//CSE 210
+//Final Project Program 4
+
 public class Running : Activity
 {
     //subclass-specific attribute

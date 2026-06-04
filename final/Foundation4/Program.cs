@@ -1,4 +1,6 @@
-
+//Jack Wilson
+//CSE 210
+//Final Project Program 4
 class Program
 {
     static void Main(string[] args)
