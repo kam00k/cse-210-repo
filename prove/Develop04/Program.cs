@@ -2,6 +2,9 @@
 //CSE 210
 //W04 Develop Project
 
+//This program exceeds requirements by implementing an Activity History,
+//Which displays how many times the user has performed an activity in
+//the current session.
 class Program
 {
     static void Main(string[] args)

@@ -15,11 +15,11 @@ class ListingActivity : Activity
         _description = "This activity will help you to realize the good things about you by having you list them according to a prompt.";
         _entryCounter = 0;
 
-        _promptList.Add("Who are people that you appreciate?");
-        _promptList.Add("What are personal strengths of yours?");
-        _promptList.Add("Who are people that you have helped this week?");
-        _promptList.Add("When have you felt the Holy Ghost this month?");
-        _promptList.Add("Who are some people you look up to?");
+        _promptList.Add("Who are the people you are closest to?");
+        _promptList.Add("What dreams for the future do you have?");
+        _promptList.Add("How were you able to serve someone this week?");
+        _promptList.Add("What have you felt inspired to do over the past month?");
+        _promptList.Add("Who are some of your relatives or ancestors you have heard interesting stories about?");
     }
 
     public void ListingLoop()

@@ -34,30 +34,6 @@ class Activity
         }
     }
 
-    //Ellipsis animation. Similarly runs according to rounds given rather than seconds.
-    public void Ellipsis(int rounds)
-    {   
-        //For each round of the animation
-        for (int i = 0; i < rounds; i++)
-        {
-            //write a dot every 250ms
-            Console.Write(". ");
-            Thread.Sleep(250);
-            Console.Write(". ");
-            Thread.Sleep(250);
-            Console.Write(". ");
-            Thread.Sleep(250);
-
-            //erase the entire line and set the cursor to the beginning of the line.
-            Console.SetCursorPosition(0, Console.CursorTop);
-            Console.Write(new String(' ', Console.WindowWidth));
-            Console.SetCursorPosition(0, Console.CursorTop);
-            Thread.Sleep(250);
-
-            //this works out to about one ellipsis per second.
-        }
-    }
-
     //countdown method (duration in seconds)
     public void Countdown(int duration)
     {
