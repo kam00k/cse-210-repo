@@ -63,5 +63,4 @@ class Activity
         Console.WriteLine("\nWell done! We hope this activity helped you to relax and increase your mindfulness and positivity.\n");
         Thread.Sleep(3000);
     }
-
 }

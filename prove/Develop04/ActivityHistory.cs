@@ -7,7 +7,6 @@ public class ActivityHistory
     //Counters for each type of activity.
     private int _breathingCounter;
     private int _reflectionCounter;
-
     private int _listingCounter;
 
     //Constructor. Initializes each counter to zero.

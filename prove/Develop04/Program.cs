@@ -54,9 +54,9 @@ class Program
                 //Displays the Activity history. Does not persist after the program ends.
                 history.GetHistory();
             }
-            //Exit the program by breaking the main loop if the fifth option is chosen.
             else if (choice == "5")
             {
+                //Exit the program by breaking the main loop if the fifth option is chosen.
                 break;
             }
             else
