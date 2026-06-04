@@ -6,11 +6,8 @@ public class Address
 {
     //Address attributes
     private string _streetAddress;
-
     private string _city;
-
     private string _state;
-
     private string _zipCode;
 
     //Constructor, assigns attributes by parameters.

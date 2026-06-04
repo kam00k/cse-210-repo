@@ -26,5 +26,4 @@ public class Address
     {
         return _country;
     }
-
 }

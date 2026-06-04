@@ -45,6 +45,7 @@ public class Order
         {
             packingLabelString += ($"\n({item.GetID()}) - {item.GetProductName()}");
         }
+
         packingLabelString += "\n----------------------------------------------";
 
         return packingLabelString;
@@ -55,6 +56,7 @@ public class Order
         string shippingLabelString = "\n----------------Shipping Label------------------\n";
 
         shippingLabelString += ($"To:{_customer.GetName()}\n{_customer.GetAddressString()}");
+        
         shippingLabelString += "\n------------------------------------------------";
 
         return shippingLabelString;

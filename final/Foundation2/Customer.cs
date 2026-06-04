@@ -2,12 +2,12 @@
 //CSE 210
 //Final Project, Program 2
 
+
 public class Customer
 {
     private string _name;
-
     private Address _address;
-
+    
     public Customer(string name, string address, string city, string state, string country)
     {
         _name = name;
@@ -26,7 +26,6 @@ public class Customer
 
     public bool IsAmerican()
     {
-
         if (_address.GetCountry() == "USA" ||  _address.GetCountry() == "US" || _address.GetCountry() == "United States")
         {
             return true;

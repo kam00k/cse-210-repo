@@ -7,7 +7,6 @@ public class Activity
     //base class attributes.
     protected string _date;
     protected double _length;
-
     protected string _activityType;
 
     //Constructor. Simply populates the first two attributes. The third is populated by the constructors of each subclass.

@@ -7,7 +7,6 @@ public class Lecture : Event
     private string _speakerName;
     private int _capacity;
 
-
     //Constructor. Calls the base constructor and sets its own attributes based on the last two parameters.
     public Lecture(string title, string description, string date, string time, string speaker, int capacity) : base(title, description, date, time)
     {

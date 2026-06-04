@@ -12,7 +12,6 @@ public class Outdoor : Event
     {
         _weatherStatement = weather;
     }
-
     
     //Outdoor-specific version of the full description method
     public void FullDescription()

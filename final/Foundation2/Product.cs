@@ -9,7 +9,6 @@ public class Product
     private double _pricePerUnit;
     private int _quantity;
 
-
     public Product(string name, string id, double unitPrice, int quant)
     {
         _productName = name;

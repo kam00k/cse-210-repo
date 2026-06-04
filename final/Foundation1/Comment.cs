@@ -16,5 +16,4 @@ public class Comment
         _commentAuthor = author;
         _commentText = text;
     }
-
 }
