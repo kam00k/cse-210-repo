@@ -191,7 +191,7 @@ public class GoalList
             }
             else if (tempGoal.GetGoalType() == "Checklist")
             {
-                Console.WriteLine($"[{i+1}] [{tempGoal.IsComplete()}] Checklist: {tempGoal.GetName()} [{tempGoal.GetProgress()}]  | Score: {tempGoal.GetScore()}");    
+                Console.WriteLine($"[{i+1}] [{tempGoal.IsComplete()}] Checklist: {tempGoal.GetName()} [{tempGoal.GetChecklistProgress()}]  | Score: {tempGoal.GetScore()}");    
             } 
         }
 

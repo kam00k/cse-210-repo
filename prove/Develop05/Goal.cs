@@ -19,7 +19,7 @@ public class Goal
         _totalScore = totalScore;
     }
 
-    //virtual method for getting the progress for Checklist goals.
+    //Virtual method for getting the progress for Checklist goals.
     //Needs to be overridden by the checklist goal rather than specific to it,
     //otherwise it won't work with GoalList's methods.
     public virtual string GetChecklistProgress()
