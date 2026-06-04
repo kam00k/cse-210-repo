@@ -33,6 +33,10 @@ class ListingActivity : Activity
         Console.WriteLine("Please enter how long you would like to do this activity for (in seconds):");
         _duration = Convert.ToInt32(Console.ReadLine());
 
+        Console.Clear();
+        Console.WriteLine(_name);
+        Console.WriteLine(_description);
+
         //Create some DateTime objects to keep track of the time.
         DateTime startTime = DateTime.Now;
         DateTime stopTime = startTime.AddSeconds(_duration);
@@ -41,7 +45,7 @@ class ListingActivity : Activity
         //Pick a random prompt from the list, display instructions to the user and start a preparation countdown.
         int randInt = _rand.Next(0, _promptList.Count());
         Console.WriteLine("\nThink about the following prompt until the countdown ends, and then start writing your answers to the prompt. Press Enter after each answer.");
-        Console.WriteLine(_promptList[randInt]+"\n");
+        Console.WriteLine("\n"+_promptList[randInt]+"\n");
         Countdown(5);
         Console.Write("\b \b");
         Console.Write("Go!\n\n");
