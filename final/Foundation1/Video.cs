@@ -37,4 +37,17 @@ public class Video
             Console.WriteLine($"\nComment by {comment._commentAuthor}: \n'{comment._commentText}'");
         }
     }
+
+    public void ShowVideo()
+    {
+        //Output information about the video in a formatted way.
+        Console.WriteLine("\n-------------------------------------");
+        Console.WriteLine($"Video Title: {_title}");
+        Console.WriteLine($"Author: {_author}");
+        Console.WriteLine($"Video Length (Seconds): {_length}");
+        Console.WriteLine($"Number of Comments: {GetCommentNumber()}");
+        
+        //List the comments under each video
+        ListComments();
+    }
 }

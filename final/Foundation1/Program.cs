@@ -33,15 +33,7 @@ class Program
         //iterate through each video
         foreach (var video in videoList)
         {
-            //Output information about the video in a formatted way.
-            Console.WriteLine("\n-------------------------------------");
-            Console.WriteLine($"Video Title: {video._title}");
-            Console.WriteLine($"Author: {video._author}");
-            Console.WriteLine($"Video Length (Seconds): {video._length}");
-            Console.WriteLine($"Number of Comments: {video.GetCommentNumber()}");
-            
-            //List the comments under each video
-            video.ListComments();
+            video.ShowVideo();
         }
         
         //final formatting line to keep it neat

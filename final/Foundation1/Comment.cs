@@ -1,3 +1,6 @@
+//Jack Wilson
+//CSE 210
+//Final Project, Program 1
 
 //Comment class
 public class Comment
