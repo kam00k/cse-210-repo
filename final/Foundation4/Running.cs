@@ -1,13 +1,16 @@
 public class Running : Activity
 {
+    //subclass-specific attribute
     private double _distance;
 
+    //Constructor. Populates the activity type and the subclass attribute.
     public Running(string date, double length, double distance) : base(date, length)
     {
         _distance = distance;
         _activityType = "Running";
     }
 
+    //Overridden getter methods.
     public override double GetDistance()
     {
         return _distance;
