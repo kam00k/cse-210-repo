@@ -75,6 +75,8 @@ public class GoalList
     //Method for displaying the goal list.
     public void GetGoalList()
     {
+
+        Console.Clear();
         //loop through the list of Goal objects.
         for (int i = 0; i < _goalList.Count; i++)
         {
@@ -95,8 +97,10 @@ public class GoalList
                 Console.WriteLine($"[{tempGoal.IsComplete()}] Checklist: {tempGoal.GetName()} [{tempGoal.GetChecklistProgress()}]  | Score: {tempGoal.GetScore()}");    
             } 
         }
-        //Display the total score and wait for user input to return to the main menu.
+
+        //Display the total score and user level, and wait for user input to return to the main menu.
         Console.WriteLine($"Total Score: {GetTotalScore()}");
+        Console.WriteLine($"Current Level: {CalculateLevel()}");
         Console.WriteLine("\nPress any key to return to the main menu...");
         Console.ReadLine();
     }
@@ -113,7 +117,22 @@ public class GoalList
         return grandTotal;
     }
 
-    //Saves the 
+    //Calculates the user's level. Levels increase after every 1000 total points.
+    public int CalculateLevel()
+    {
+        int totalScore = GetTotalScore();
+        if (totalScore < 1000)
+        {
+            return 1;
+        }
+        else
+        {
+            return Convert.ToInt32(GetTotalScore() / 1000)+1;
+        }
+        
+    }
+
+    //Saves the goal list to a file.
     public void SaveGoalList()
     {
         //Get a filename from the user.
@@ -177,6 +196,11 @@ public class GoalList
         //variable to store the user's choice of goal to record.
         int recordChoice;
 
+        //variables to store the user's level before and after recording.
+        //levelAfter will be assigned later.
+        int levelBefore = CalculateLevel();
+        int levelAfter;
+
         //Show the list of goals, each with a number beside it.
         for (int i = 0; i < _goalList.Count; i++)
         {
@@ -206,6 +230,7 @@ public class GoalList
             if (recordChoice > 0 && recordChoice < _goalList.Count+1)
             {
                 _goalList[recordChoice-1].Report();
+                levelAfter = CalculateLevel();
                 break;
             }
 
@@ -217,8 +242,15 @@ public class GoalList
             }
         }
 
+        
         //End with a message to the user, showing the current score for the selected goal after completion.
         Console.WriteLine($"Goal recorded successfully! Your score for this goal is now {_goalList[recordChoice-1].GetScore()}");
+
+        //Congratulate the user if their level increases.
+        if(levelAfter > levelBefore)
+        {
+            Console.WriteLine($"Congratulations! You went up a level! You are now at level {CalculateLevel()}");
+        }
         Thread.Sleep(1500);
     }
 }

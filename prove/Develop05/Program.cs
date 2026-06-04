@@ -2,6 +2,10 @@
 //CSE 210
 //W05 Develop Project
 
+//This program exceeds core requirements by adding a level system, 
+//which increases the user's level by one, for every thousand points 
+//they have acquired. A message is also shown to the user when 
+//recording a goal earns enough points to increase their level. 
 class Program
 {
     static void Main(string[] args)
@@ -23,7 +27,7 @@ class Program
             Console.WriteLine("[6] Quit");
 
             //Get the activity choice from the user
-            Console.Write("Please select the activity you would like to do: ");
+            Console.Write("\nPlease select the activity you would like to do: ");
             string choice = Console.ReadLine();
             
             //Call a goalList method depending on the choice made
